@@ -8,3 +8,70 @@ body{
     line-height: 2;
 }
 
+/* ----------- MOBILE MENU ---------- */
+
+.mobile-menu-container{
+    display: none;
+}
+    
+.mobile-menu-header{
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    column-gap:30%;
+    padding: 10px;
+}
+
+.logo{
+    width: 20%;
+}
+
+.hamburguer-botton{
+    width: 10%;
+}
+
+.link{
+    padding: 10px;
+    font-size: 5vw;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out
+}
+
+.mobile-menu-options-list{
+    display: none;
+    width: 50%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    list-style: none;
+}
+
+.display{
+    display: block;
+}
+
+.link:hover{
+    color: #FF8DAC;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:460px){
+    .mobile-menu-container{
+        display: block;
+    }
+}
+@media screen and (max-width:460px){
+    .desktop-menu-container{
+        display: none;
+    }
+}
