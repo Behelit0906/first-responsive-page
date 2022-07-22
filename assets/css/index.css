@@ -3,7 +3,7 @@ font-family: 'Work Sans', sans-serif; */
 
 
 body{
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     background-color: #16ffbd;
     line-height: 2;
 }
@@ -34,10 +34,9 @@ body{
 
 .link{
     padding: 10px;
-    font-family: 'Barlow Condensed', sans-serif;
     color: inherit;
     text-decoration: none;
-    transition: color 2s ease-in-out;
+    transition: color 0.2s ease-in-out;
 }
 
 .mobile-menu-options-list{
@@ -86,21 +85,31 @@ body{
 
 
 
+/* ----------- VIDEO ---------- */
+
+.video-container{
+    height: 45vw;
+    margin-top: 17%;
+    transform-origin: 0 0;
+    transform: skewY(-10deg);
+    overflow: hidden;
+    
+}
+
+.video{
+    overflow: hidden;
+    width: 100%;
+    transform: skewY(10deg) scale(1.4); ;
+    
+}
+
+
+
+
+
 .display{
     display: block;
 }
-
-.link:hover{
-    color: #FF8DAC;
-}
-
-
-
-
-
-
-
-
 
 
 @media screen and (max-width:460px){
@@ -111,6 +120,12 @@ body{
 @media screen and (max-width:460px){
     .desktop-menu-container{
         display: none;
+    }
+}
+
+@media (hover:hover){
+    .link:hover{
+        color: #FF8DAC;
     }
 }
 
