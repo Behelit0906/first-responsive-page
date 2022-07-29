@@ -117,7 +117,7 @@ body{
     width: 320px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10%;
+    margin-bottom: 7%;
     font-family: 'Work Sans', sans-serif;
     font-size: 1rem;
     font-weight: 500;
@@ -129,6 +129,73 @@ body{
     font-size: 2.5rem;
     font-family: 'Barlow Condensed', sans-serif
 }
+
+
+/* ----------- WORK SECTION ----------- */
+
+.works-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 12vw;
+    
+
+
+}
+
+.work-section-title{
+    font-size: 2.5rem
+}
+
+.works-grid{
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    transform-origin: 0 0;
+    transform: skewY(-10deg);
+}
+
+
+.cell{
+    position: relative;
+    overflow: hidden;
+    height: 18vw;
+}
+
+
+.cell-image{
+    position: absolute;
+    top: -11%;
+    width: 100%;
+
+    
+}
+
+.cell-image, .info{
+    transform: skewY(10deg) scale(1.2);
+    
+}
+
+.info{
+    height: 100%;
+    padding-top: 20%;
+    position: relative;
+    z-index: 10;
+    font-size: 1.3vw;
+    line-height: 1;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.font-verde{
+    color: #16ffbd;
+}
+
 
 
 .display{
@@ -145,9 +212,10 @@ body{
         font-size: 14px;
     }
     
-    .intro-section-title{
+    .intro-section-title, .work-section-title{
         font-size: 1.7rem;
     }
+    
 }
 
 @media screen and (max-width:460px){
@@ -165,6 +233,12 @@ body{
     .link:hover{
         color: #FF8DAC;
     }
+    .info:hover{
+        opacity: 1;
+    }
+    .info:hover .info-text{
+        animation: bounce 0.4s ease-in-out;
+    }
 }
 
 @keyframes load-navbar {
@@ -174,4 +248,17 @@ body{
     to{
         transform: scale(1);
     }
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(8vw);
+    }
+    80%{
+        transform: translateY(-3vw);
+    }
+    100%{
+        transform: translateY(0vw);
+    }
+
 }
