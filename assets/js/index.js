@@ -1,4 +1,8 @@
+import {workInfo} from './components/work-info.js';
+customElements.define('info-card',workInfo);
+
 const curtain = document.querySelector('#curtain');
+
 
 document.addEventListener('DOMContentLoaded', function(){
 
@@ -14,6 +18,16 @@ document.addEventListener('DOMContentLoaded', function(){
     elements.forEach(element => {
         element.addEventListener('click', function(){
             curtain_down();
+
+            setTimeout(function(){
+                document.body.style.overflow = 'hidden';
+                const card_number = element.dataset.cell;
+                const info_card = document.createElement("info-card");
+                info_card.setAttribute('title','INDEED - SMART AND SMALL');
+                info_card.setAttribute('imageNumber',card_number);
+                document.body.appendChild(info_card);
+            }, 1000)
+
         });
         
     });
