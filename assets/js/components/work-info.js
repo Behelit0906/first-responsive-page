@@ -122,10 +122,7 @@ export class workInfo extends HTMLElement{
 
     }
 
-    attributeChangedCallback(name, old, now) {
-        console.log(`El atributo ${name} ha sido modificado de ${old} a ${now}.`);
-    }
-
+    
     render(){
         return render(this.template(), this.shadowRoot, {eventContext: this});
     }
